@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+h2 {
+    text-align: left;
+  }
+</style>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="logo.png" alt="Sisyphus Logo">
+            </div>
+            <h2 class="login-title">Login</h2>
+            <form id="loginForm">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" placeholder="Enter..." required>
+
+                <label for="password">Password*</label>
+                <input type="password" id="password" placeholder="Enter..." required>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Continue</button>
+
+                <p>Or continue with</p>
+                <div class="social-login">
+                    <button class="google"><img src="google.png" alt="google Logo"></button>
+                    <button class="microsoft"><img src="microsoft.png" alt="microsoft Logo"></button>
+                    <button class="apple"><img src="apple.png" alt="apple Logo"></button>
+                </div>
+
+                <p>Don't have an account yet? <a href="#">Get started with free trial</a></p>
+
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2024 Sisyphus | Powered By CloudCorp</p>
+        <p>Software Version 1.1.0</p>
+    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            if (email && password) {
+                alert('Login Successful');
+            }
+        });
+
+        document.getElementById('forgotPasswordLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            alert('We have sent a recovery email');
+        });
+    </script>
+</body>
+</html>
